@@ -50,4 +50,19 @@ function createUSer(){
           console.log('Houve um erro, favor verifique os dados digitados');
         })
       }
+
+  //Change the password
+
+let email = document.getElementById('email');
+let newPswd = document.getElementById('newPassword');   
+
+function changePswd(){
+    let newUserEmail = inputCreateUser.value;
+    let newUserPassword = inputCreatePswd.value;
+    
+    auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword).then(
+        () => {alert('Usuário Criado! Favor, agora logue com seu usuário :)')}).catch(error =>{
+          console.log('Houve um erro, favor verifique os dados digitados');
+        })
+      }
     
