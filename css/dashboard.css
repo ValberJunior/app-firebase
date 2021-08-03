@@ -34,7 +34,7 @@ body{
     width: 90%;
 
     display:grid;
-    grid-template: repeat(2,150px)/repeat(2,150px);
+    grid-template: repeat(2,170px)/repeat(2,170px);
     gap:15px;
 
     align-content: center;
