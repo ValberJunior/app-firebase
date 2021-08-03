@@ -12,9 +12,8 @@ body{
 }
 
 .container{
-    background-image:linear-gradient(blue,green);
+    background-image:url('../assets/background2.jpg');
     background-size: cover;
-    background-attachment: fixed;
 
     width: 414px;
     height: 736px;
@@ -30,7 +29,7 @@ body{
     max-width: 80%;
     margin:auto;
 
-    background-color:#ffffff5b;
+    background-color:#00000075;
 
     padding: 25px;
 

@@ -9,9 +9,8 @@ body{
 }
 
 .container{
-    background-image:linear-gradient(blue,green);
+    background-image:url('../assets/background.jpg');
     background-size: cover;
-    background-attachment: fixed;
 
     width: 414px;
     height: 736px;
