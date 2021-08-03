@@ -5,7 +5,7 @@ btnCreateUser.addEventListener('click', ()=>{
     
     if(inputCreateUser.value && inputCreatePswd.value !=''){
  
-        createUSer();
+        createUser();
     
         } else{
             alert('Insira um E-mail e Senha válidos')

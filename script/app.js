@@ -11,12 +11,12 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
+ 
 
-
-  //Page index
+  //Page index----------------------------------------------------------------------
 
   //Login
-
+  
   let auth = firebase.auth();
 
   let userInput = document.getElementById('userEmail');
@@ -37,12 +37,14 @@
     });
 }
 
-//Create User
+//Create User----------------------------------------------------------------------------------------
 
+
+let inputName = document.getElementById('inputName');
 let inputCreateUser = document.getElementById('inputCreateUser');
 let inputCreatePswd = document.getElementById('inputCreatePswd');
 
-function createUSer(){
+function createUser(){
     let newUserEmail = inputCreateUser.value;
     let newUserPassword = inputCreatePswd.value;
     
@@ -50,24 +52,19 @@ function createUSer(){
         () => {alert('Usuário Criado! Favor, agora logue com seu usuário :)')}).catch(error =>{
           console.log('Houve um erro, favor verifique os dados digitados');
         })
+        
       }
 
-  function createId(){
-    return Math.floor(Math.random()*10000);
-  }
+
 
   //Change the password
 
-let email = document.getElementById('email');
-let newPswd = document.getElementById('newPassword');   
+let email = document.getElementById('email');  
 
 function changePswd(){
-    let newUserEmail = inputCreateUser.value;
-    let newUserPassword = inputCreatePswd.value;
-    
-    auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword).then(
-        () => {alert('Usuário Criado! Favor, agora logue com seu usuário :)')}).catch(error =>{
-          console.log('Houve um erro, favor verifique os dados digitados');
-        })
+   
+auth.sendPasswordResetEmail(email.value).then(()=>{alert('E-mail enviado!\nVerifique a sua caixa de entrada...')}).catch(error=>
+  alert('Houve um erro, favor, verifique os dasos informados!'))
+
       }
     
