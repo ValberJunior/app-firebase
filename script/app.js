@@ -49,8 +49,8 @@ function createUser(){
     let newUserPassword = inputCreatePswd.value;
     
     auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword).then(
-        () => {alert('Usuário Criado! Favor, agora logue com seu usuário :)')}).catch(error =>{
-          console.log('Houve um erro, favor verifique os dados digitados');
+        () => {alert('Usuário criado com Sucesso! :)')}).catch(error =>{
+          console.log('Favor, verifique os dados digitados');
         })
         
       }
@@ -63,8 +63,8 @@ let email = document.getElementById('email');
 
 function changePswd(){
    
-auth.sendPasswordResetEmail(email.value).then(()=>{alert('E-mail enviado!\nVerifique a sua caixa de entrada...')}).catch(error=>
-  alert('Houve um erro, favor, verifique os dasos informados!'))
+auth.sendPasswordResetEmail(email.value).then(()=>{alert('E-mail enviado!\nVerifique a sua caixa de entrada :)')}).catch(error=>
+  alert('Favor, verifique os dasos informados!'))
 
       }
     
