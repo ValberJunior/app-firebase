@@ -99,4 +99,7 @@ input {
     font-size: 15px;
 }
 
+#create_user:hover , #back:hover{
+    opacity: 0.5;
+}
 

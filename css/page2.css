@@ -97,4 +97,5 @@ input {
     font-size: 15px;
 }
 
+#create_password:hover, #back:hover{ opacity: 0.5;}
 

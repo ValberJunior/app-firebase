@@ -8,7 +8,7 @@ body{
     font-family: 'Poppins', sans-serif;
 
     height: 100vh;
-    
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +88,8 @@ input {
     color:white;
     font-size: 15px;
 }
+
+#send:hover{ opacity: 0.5;}
 
 .opts{
     width: 100%;
