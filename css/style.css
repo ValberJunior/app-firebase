@@ -53,6 +53,7 @@ input {
 
 ::placeholder{
     color:#ffffff88;
+    font-size: 14px;
 }
 
 .login{
