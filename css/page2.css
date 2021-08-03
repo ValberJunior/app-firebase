@@ -45,6 +45,8 @@ p{
     color:white;
      margin-top:10%;
      margin-bottom:5%;
+
+     font-size: 15px;
  
 }
 
@@ -55,7 +57,7 @@ input {
 
     box-sizing: border-box;
 
-    font-size: 14px;
+    font-size: 15px;
 
     outline: none;
     border:none;
@@ -68,7 +70,7 @@ input {
 
 ::placeholder{
     color:#ffffff88;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 
