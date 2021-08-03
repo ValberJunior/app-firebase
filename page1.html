@@ -4,31 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
     <title>Criar Usuário</title>
+    <!--CSS-->
     <link href='./css/page1.css' rel='stylesheet' type='text/css'>
+    <!--icon of viewport-->
     <link href='./assets/logo.png' rel='icon' type='icone/png'>
+    <!--Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <!--Icons for Page-->
     <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+<!--DIV CONTAINER-->    
 <div class='container'>
 
+<!--Section create user-->    
 <section class='create'>
 <p> <i class="fas fa-at"></i> Digite abaixo um e-mail válido: </p>    
-<input type='email' placeholder='Digite aqui o seu E-mail'>
+<input type='email' placeholder='Digite aqui o seu E-mail' id='inputCreateUser'>
 
 <p> <i class="fas fa-lock"></i> Crie uma Senha de 6 caracteres</p>
-<input type='text' placeholder="Crie uma Senha">
+<input type='text' placeholder="Crie uma Senha" id='inputCreatePswd'>
 
-
+<!--Buttons-->
 <button id='create_user'>CRIAR USUÁRIO</button>
 <button id='back'>VOLTAR</button>
 
 
-</div>
+</div> <!--DIV CONTAINER END--> 
 
 
+<!-- SCRIPT FIREBASE APP-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- SCRIPT AUTH-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+<!-- SCRIPT ANALYTICS-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+<!--My Scripts-->
+<script src='./script/app.js'></script>
 <script src='./script/page1.js'></script>
 </body>
 </html>

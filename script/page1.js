@@ -2,7 +2,15 @@ let btnCreateUser = document.getElementById('create_user');
 let back = document.getElementById('back');
 
 btnCreateUser.addEventListener('click', ()=>{
-    alert('Em construção');
+    
+    if(inputCreateUser.value && inputCreatePswd.value !=''){
+ 
+        createUSer();
+    
+        } else{
+            alert('Insira um E-mail e Senha válidos')
+        }
+
 })
 
 back.addEventListener('click', ()=>{

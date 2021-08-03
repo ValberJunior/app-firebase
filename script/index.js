@@ -3,8 +3,15 @@ let btnCreateUser = document.getElementById('createUser');
 let btnChangePswd = document.getElementById('changePassword');
 
 send.addEventListener('click',()=>
-{
-    window.location.replace('../dashboard.html')
+{ 
+    if(userInput.value && pswInput.value !=''){
+ 
+    login();
+
+    } else{
+        alert('Insira um usuário ou Senha')
+    }
+    
 });
 
 

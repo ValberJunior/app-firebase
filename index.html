@@ -4,34 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Title-->
     <title>Login | Meu treino</title>
+    <!--CSS-->
     <link href='./css/style.css' rel='stylesheet' type='text/css'>
+    <!--icon of viewport-->
     <link href='./assets/logo.png' rel='icon' type='icone/png'>
+    <!--Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <!--Icons for Page-->
     <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
+<!--DIV CONTAINER-->    
 <div class='container'>
 
-
+<!--Logo-->
 <img src='./assets/logo.png' alt='logo' type='image/png' id='logo'>
 
-
+<!--Section of Login-->
 <section class='login'>
 <p>Usuário </p>    
-<input type='email' placeholder='Digite Seu E-mail'>
+<input type='email' placeholder='Digite Seu E-mail' id='userEmail'>
 <p>Senha</p>
-<input type='password' placeholder="Digite Sua Senha">
+<input type='password' placeholder="Digite Sua Senha" id='userPassword'>
 <button id='send'>ENTRAR</button>
 
+<!--Options Create user and restoure password-->
 <div class='opts'>
 <p id='createUser'><i class="far fa-user"></i> Criar Usuário</p>
 <p id='changePassword'>Esqueci a Senha <i class="fas fa-key"></i></p>
 </div>
 </section>
 
-
+<!--My Footer-->
     <footer>
         <ul class='social'>
            <li><a href="https://www.linkedin.com/in/valber-junior-238217b4/"><img src="./assets/linkedin.png" type="image/png" alt="logo linekdin" class="icone"></a></li>
@@ -40,9 +47,20 @@
     </footer>
 
 
-</div>
+</div> <!--DIV CONTAINER END-->
 
+<!-- SCRIPT FIREBASE APP-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 
+<!-- SCRIPT AUTH-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+
+<!-- SCRIPT ANALYTICS-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+<!--MY SCRIPT-->
+<script src='./script/app.js'></script>
 <script src='./script/index.js'></script>
+
 </body>
 </html>
