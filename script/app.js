@@ -32,7 +32,7 @@
       auth.signInWithEmailAndPassword(userEmail, userPassword).then(() =>{
         window.location.replace('../dashboard.html');
         }).catch(error=>{
-          alert('Usuário não encontrado, favor verifique seus dados ou crie um novo usuário! :)');
+          alert('Usuário não encontrado!\n Verifique seus dados ou crie um novo usuário :)');
         })
     });
 }
