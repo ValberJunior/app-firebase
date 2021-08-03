@@ -54,3 +54,41 @@ body{
 img{
     width: 100px;
 }
+
+p{
+    color:white;
+}
+
+.training, .profile, .diet{
+    background-color: red;
+
+    width: 414px;
+    height: 736px;
+
+    position:absolute;
+    left:0;
+    top:0;
+
+    display:none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.back{
+    margin-top:10%;
+
+    width: 70px;
+    padding: 20px;
+
+    border-radius: 50px;
+
+    border: none;
+    outline: none;
+
+    cursor:pointer;
+
+    background-color:#06d106;
+
+    color:white;
+    font-size: 25px;
+}
