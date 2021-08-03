@@ -12,6 +12,7 @@
   firebase.initializeApp(firebaseConfig);
   firebase.analytics();
 
+
   //Page index
 
   //Login
@@ -50,6 +51,10 @@ function createUSer(){
           console.log('Houve um erro, favor verifique os dados digitados');
         })
       }
+
+  function createId(){
+    return Math.floor(Math.random()*10000);
+  }
 
   //Change the password
 
