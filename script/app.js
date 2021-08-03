@@ -26,7 +26,7 @@ op3.addEventListener('click',()=>{
 //Back to menu dashboard;
 btns_back.forEach((button)=>{button.onclick = backDashboard});
 
-function backDashboard(){
+function backDashboard(){                            //Clean all pop-ups
    training.style.display = 'none';
    profile.style.display = 'none';
    diet.style.display = 'none';

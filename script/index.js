@@ -4,7 +4,7 @@ let btnChangePswd = document.getElementById('changePassword');
 
 send.addEventListener('click',()=>
 {
-    alert('Em construção');
+    window.location.replace('../dashboard.html')
 });
 
 
