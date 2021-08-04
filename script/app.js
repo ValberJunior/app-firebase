@@ -9,6 +9,9 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
+
+
+
   //Page index----------------------------------------------------------------------
 
   //Login
