@@ -18,7 +18,7 @@ Um aplicativo para auxiliar e organizar o aluno de uma academia, com orientaçã
 
 ### Como funcionaria?
 
-O usuário criaria a sua conta e os dados seriam alimentados pelo admin, que definirá uma dieta para o mesmo e uma rotina de treino que seriam atualizados conformme necessidade,
+O usuário criaria a sua conta e os dados seriam alimentados pelo admin, que definirá uma dieta para o mesmo e uma rotina de treino que seriam atualizados conforme necessidade,
 pelo personal trainer.
 
 ### Funcionalidades da interface:
