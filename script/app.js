@@ -49,7 +49,10 @@ function createUser(){
     let newUserPassword = inputCreatePswd.value;
     
     auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword).then(
-        () => {alert('Usuário criado com Sucesso! :)')}).catch(error =>{
+        () => {alert('Usuário criado com Sucesso! :)')
+        setTimeout(() => {
+          window.location.replace('../index.html');
+      }, 1500);}).catch(error =>{
           console.log('Favor, verifique os dados digitados');
         })
         
@@ -63,7 +66,11 @@ let email = document.getElementById('email');
 
 function changePswd(){
    
-auth.sendPasswordResetEmail(email.value).then(()=>{alert('E-mail enviado!\nVerifique a sua caixa de entrada :)')}).catch(error=>
+auth.sendPasswordResetEmail(email.value).then(()=>{
+  alert('E-mail enviado!\nVerifique a sua caixa de entrada :)')
+  setTimeout(() => {
+    window.location.replace('../index.html');
+}, 1500);}).catch(error=>
   alert('Favor, verifique os dasos informados!'))
 
       }

@@ -6,10 +6,7 @@ btnCreateUser.addEventListener('click', ()=>{
     if(inputCreateUser.value && inputCreatePswd.value !=''){
  
         createUser();
-        setTimeout(() => {
-            window.location.replace('../index.html');
-        }, 2000);
-        
+                
         } else{
             alert('Insira um E-mail e Senha válidos')
         }
