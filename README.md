@@ -14,7 +14,7 @@ https://user-images.githubusercontent.com/84424883/128252907-340a1977-8958-425e-
 
 ## Ojetivo:
 
-Um aplicativo para auxiliar e organizar o aluno de uma academia, com orientação alimentar e de treino, específico para a sua finalidade.
+Um aplicativo para auxiliar e organizar o aluno de uma academia, com orientação alimentar e de treino específico para a sua finalidade.
 
 ### Como funcionaria?
 
