@@ -40,7 +40,6 @@
 //Create User----------------------------------------------------------------------------------------
 
 
-let inputName = document.getElementById('inputName');
 let inputCreateUser = document.getElementById('inputCreateUser');
 let inputCreatePswd = document.getElementById('inputCreatePswd');
 
