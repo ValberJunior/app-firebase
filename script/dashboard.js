@@ -39,6 +39,6 @@ op4.addEventListener('click',()=>{
     let confirmation = window.confirm('Deseja sair do App?')
    
     if(confirmation){
-    window.location.replace('../index.html');
+    logout();
     }
 });

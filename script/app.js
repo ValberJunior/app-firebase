@@ -74,3 +74,12 @@ auth.sendPasswordResetEmail(email.value).then(()=>{
 
       }
     
+//Logout
+
+function logout(){
+
+  auth.signOut().then(()=>{
+    window.location.replace('../index.html');
+  }).catch(error => {console.log(error)})
+
+}

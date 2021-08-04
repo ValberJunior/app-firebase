@@ -4,16 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title-->
     <title>Dashboard</title>
+    <!--CSS-->
     <link href='./css/dashboard.css' rel='stylesheet' type='text/css'>
+    <!--Icon viewPort-->
     <link href='./assets/logo.png' rel='icon' type='icone/png'>
+    <!--Font-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
+    <!--Icon for Page-->
     <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+
+<!--DIV CONTAINER-->    
 <div class='container'>
 
+<!--Section Menu-->    
 <section class='menu'>
 
     <div class='opt' id='op1'><img src='./assets/image1.png'></div>
@@ -23,6 +30,7 @@
 
 </section>
 
+<!--POP-UPS-->
 
 <div class='training'>
 <p>Aqui ficará seu treino...</p>
@@ -40,9 +48,23 @@
 </div>
 
 
-</div>
+</div> <!--DIV CONTAINER END-->
+
+<!-- SCRIPT FIREBASE APP-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- SCRIPT FIRESTORE-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+<!-- SCRIPT AUTH-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
 
 
+<!-- SCRIPT ANALYTICS-->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
+
+<!--MY SCRIPT-->
+<script src='./script/app.js'></script>
 <script src='./script/dashboard.js'></script>
 </body>
 </html>
