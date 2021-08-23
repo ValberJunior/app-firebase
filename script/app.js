@@ -1,12 +1,12 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyBAozfyUdlSuieTsVhwfsAeZ2raRlSb9Kc",
-  authDomain: "app-meu-treino-7df6c.firebaseapp.com",
-  projectId: "app-meu-treino-7df6c",
-  storageBucket: "app-meu-treino-7df6c.appspot.com",
-  messagingSenderId: "687046193094",
-  appId: "1:687046193094:web:3871af5483c94b2a1accc7",
-  measurementId: "G-V70M3QEYEG"
-};
+  var firebaseConfig = {
+    apiKey: "AIzaSyCGRMQ0BuiKB-wCZuxyhTyEJQGW_86ARro",
+    authDomain: "treinoapp-937bf.firebaseapp.com",
+    projectId: "treinoapp-937bf",
+    storageBucket: "treinoapp-937bf.appspot.com",
+    messagingSenderId: "792663491656",
+    appId: "1:792663491656:web:2cd35889a2acc4bbcdc47d",
+    measurementId: "G-WS2ERRGGN0"
+  };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
