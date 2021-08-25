@@ -87,6 +87,7 @@ header{
 .data{      
     margin-bottom:20px;
     border-bottom: 2px solid #cdcdcd73;
+
 }
 
 .titleMenu {
@@ -95,6 +96,7 @@ header{
     font-size: 25px;
     text-align: center;
     margin-bottom:20px;
+    padding-top:20px;
 
     border-bottom: 4px solid #06d106;
 }
