@@ -1,62 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Title-->
-    <title>Login | Meu treino</title>
+    <title>Meu Treino APP</title>
+
     <!--CSS-->
     <link href='./css/style.css' rel='stylesheet' type='text/css'>
-    <!--icon of viewport-->
-    <link href='./assets/logo.png' rel='icon' type='icone/png'>
-    <!--Font-->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Sedgwick+Ave+Display&display=swap" rel="stylesheet">
-    <!--Icons for Page-->
+
+    <!--Icon-view-port-->
+    <link href='./assets/logo.png' rel='icon' type='image/png'>
+
+    <!--Icons-->
     <script src="https://kit.fontawesome.com/d2883e7411.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
+
 
 <!--DIV CONTAINER-->    
 <div class='container'>
 
-<!--Logo-->
-<img src='./assets/logo.png' alt='logo' type='image/png' id='logo'>
+    <!--Logo-->
+    <img src='./assets/logo.png' alt='logo' type='image/png' id='logo'>
+    
+    <!--Section of Login-->
+    <section class='login'>
+    <p>Usuário </p>    
+    <input type='email' placeholder='Digite Seu E-mail' id='userEmail'>
+    <p>Senha</p>
+    <input type='password' placeholder="Digite Sua Senha" id='userPassword'>
+    <button id='send'>ENTRAR</button>
+    
+    <!--Options Create user and restoure password-->
+    <div class='opts'>
+    <p id='createUser'><i class="fas fa-user-plus"></i> Criar Usuário</p>
+    <p id='changePassword'>Esqueci a Senha <i class="fas fa-key"></i></p>
+    </div>
+    </section>
+    
+    <!--My Footer-->
+        <footer>
+            <ul class='social'>
+               <li><a href="https://www.linkedin.com/in/valber-junior-238217b4/"><img src="./assets/linkedin.png" type="image/png" alt="logo linekdin" class="icone"></a></li>
+               <li><a href="https://github.com/ValberJunior"><img src="./Assets/github.png" type="image/png" alt="logo github" class="icone"></a></li>
+            </ul>
+        </footer>
+    
+    
+    </div> <!--DIV CONTAINER END-->
+    
+<!--Firebase-->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase.js"></script>
 
-<!--Section of Login-->
-<section class='login'>
-<p>Usuário </p>    
-<input type='email' placeholder='Digite Seu E-mail' id='userEmail'>
-<p>Senha</p>
-<input type='password' placeholder="Digite Sua Senha" id='userPassword'>
-<button id='send'>ENTRAR</button>
-
-<!--Options Create user and restoure password-->
-<div class='opts'>
-<p id='createUser'><i class="fas fa-user-plus"></i> Criar Usuário</p>
-<p id='changePassword'>Esqueci a Senha <i class="fas fa-key"></i></p>
-</div>
-</section>
-
-<!--My Footer-->
-    <footer>
-        <ul class='social'>
-           <li><a href="https://www.linkedin.com/in/valber-junior-238217b4/"><img src="./assets/linkedin.png" type="image/png" alt="logo linekdin" class="icone"></a></li>
-           <li><a href="https://github.com/ValberJunior"><img src="./Assets/github.png" type="image/png" alt="logo github" class="icone"></a></li>
-        </ul>
-    </footer>
-
-
-</div> <!--DIV CONTAINER END-->
-
-<!-- SCRIPT FIREBASE-->
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-analytics.js"></script>
-
-<!--MY SCRIPT-->
-<script src='./script/app.js'></script>
+<!--My SCript-->
+<script src='./script/app.js' defer></script>
 <script src='./script/index.js'></script>
 
 </body>

@@ -24,10 +24,52 @@ body{
     height: 736px;
 
     display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+header{
+    width: 100%;
+    color:white;
+    align-self: flex-start;
+    justify-self: flex-start;
+
+    display: flex;
     align-items: center;
     justify-content: center;
 
+    margin-bottom: 30px;
 }
+
+.userBar :hover {
+
+    color: #06d106;
+    cursor: pointer;
+}
+
+#userSession{
+    margin-left:10px;
+}
+
+.titleMenu{
+ margin-bottom:30px;
+-webkit-text-stroke-width: 0.2px;
+-webkit-text-stroke-color: #06d106;
+
+}
+
+table{
+
+    padding:10px;
+
+    box-sizing: border-box;
+}
+
+.td2{
+    text-align: center;
+}
+
 .menu{
     width: 90%;
 
