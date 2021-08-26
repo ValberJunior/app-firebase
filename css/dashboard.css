@@ -142,12 +142,9 @@ p{
 /*Menus*/
 
 .training, .profile, .diet{
-    background-color: #363636;
 
     width: 414px;
     height: 736px;
-
-    box-sizing: border-box;
 
     position:absolute;
     top:50%;
