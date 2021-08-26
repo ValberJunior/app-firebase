@@ -19,6 +19,9 @@ body{
     background-image:url('../assets/background.png');
     background-size: cover;
 
+
+    position:relative;
+
     width: 414px;
     height: 736px;
 
@@ -143,8 +146,8 @@ p{
 .training, .profile, .diet{
     background-color: #363636;
 
-    width: 414px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
 
 
     position:absolute;
