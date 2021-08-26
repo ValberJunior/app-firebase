@@ -74,14 +74,19 @@ header{
 
   cursor:pointer;
 
-  margin-top: 50px;
-
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .title{
-    color:black;
+    background: #0000005d;
+    color:#e2e2e2;
     font-weight: bolder;
     font-size: 17px;
+    
+    border-radius:10px;
+
+    padding-left: 5px;
 
     margin-bottom:5px;
 }
@@ -93,6 +98,8 @@ header{
 }
 
 .titleMenu {
+    
+    background: black;
     color: white;
     font-weight: bolder;
     font-size: 30px;
@@ -101,7 +108,7 @@ header{
     border-bottom: 4px solid #06d106;
 
     padding-top: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
 }
 
 
