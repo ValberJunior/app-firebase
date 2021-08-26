@@ -74,7 +74,7 @@ header{
 
   cursor:pointer;
 
-  margin-top: 20px;
+  margin-top: 30px;
 
 }
 
@@ -100,7 +100,8 @@ header{
 
     border-bottom: 4px solid #06d106;
 
-    padding-top: 20px;
+    padding-top: 30px;
+    margin-bottom: 10px;
 }
 
 
