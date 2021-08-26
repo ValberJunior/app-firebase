@@ -3,8 +3,10 @@ let op2 = document.getElementById('op2');
 let op3 = document.getElementById('op3');
 let op4 = document.getElementById('op4');
 let btns_back = document.querySelectorAll('.back');
+let btn_edit = document.getElementById('edit');
 let menuTraining = document.getElementsByClassName('training')[0];
 let profile = document.getElementsByClassName('profile')[0];
+let editProfile = document.getElementsByClassName('editProfile')[0];
 let diet = document.getElementsByClassName('diet')[0];
 
 
@@ -30,6 +32,7 @@ function backDashboard(){                            //Clean all pop-ups
    menuTraining.style.display = 'none';
    profile.style.display = 'none';
    diet.style.display = 'none';
+   editProfile.style.display = 'none';
 }
 
 
@@ -75,6 +78,7 @@ treinoD.innerText = trnD;
 // menu profile
 let menu2 = document.getElementById('menu2');
 
+let profile_picture = document.getElementById('profile_picture');
 let name_user = document.getElementById('name_user')
 let Last_name = document.getElementById('last_name')
 let id_user = document.getElementById('id_user')
@@ -88,6 +92,8 @@ let ct = localStorage.getItem("user_city");
 let em = localStorage.getItem("user_email");
 let img = localStorage.getItem("user_image");
 
+
+profile_picture.src = img;
 name_user.innerText = nm;
 Last_name.innerText = ln;
 id_user.innerText = id;
@@ -118,3 +124,24 @@ ref3.innerText = dietItem3;
 ref4.innerText = dietItem4; 
 ref5.innerText = dietItem5; 
 ref6.innerText = dietItem6; 
+
+
+//edit profile
+
+btn_edit.addEventListener('click',()=>{
+    editProfile.style.display='grid';
+})
+
+// Save changes:
+
+let btn_save = document.getElementById('save');
+
+btn_save.addEventListener('click', ()=>{
+    let confirmation = window.confirm('Deseja Salvar as alterações?')
+
+    if(confirmation){
+        upgradeprofile();
+    } else {
+        window.location.replace('../dashboard.html');
+    }
+})

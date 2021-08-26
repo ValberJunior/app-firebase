@@ -63,7 +63,7 @@
    
 
     <div class='footerContent'>
-        <button class='back'><i class="fas fa-house-user"></i></button>
+        <button class='btn back'><i class="fas fa-house-user"></i></button>
     </div>
 
 </div>
@@ -72,7 +72,7 @@
 <div class='profile'>
 
     <div class='profileHeader'>   
-        <img src='./assets/profiledefault.jpg' alt='profile picture' id='profile_picture' >
+        <img src='../assets/profiledefault.jpg' alt='profile picture' id='profile_picture' >
     </div> 
 
     <div class='profileContent'>
@@ -94,10 +94,43 @@
 
     
     <div class='profileFooter'>
-            <button class='back'><i class="fas fa-house-user"></i></button>
-            <button class='back'><i class="fas fa-user-edit"></i></button>
+            <button class='btn back'><i class="fas fa-house-user"></i></button>
+            <button class='btn' id='edit'><i class="fas fa-user-edit"></i></button>
     </div>
 </div>
+
+<!--edit profile-->
+
+<div class='editProfile'>
+
+
+    <div class='headerContent'>
+        <h1 class='titleMenu'>Ajustes <i class="fas fa-user-cog"></i></h1>
+    </div>  
+        
+    <div class='textContent'>
+
+        <p style='text-align: center'>Escolha sua Foto de Perfil:</p>
+        <input type='file' id='fileInput'>
+
+        <input type='text' id='edit_name_user' placeholder='Digite Seu Nome'>
+
+
+        <input id='edit_last_name' placeholder='Digite Seu Sobrenome'>
+
+    
+        <input id='edit_city' placeholder='Digite Sua Cidade'>
+
+    </div>
+
+    
+    <div class='profileFooter'>
+            <button class='btn back'><i class="fas fa-house-user"></i></button>
+            <button class='btn back' id='save'><i class="far fa-save"></i></button>
+    </div>
+</div>
+
+
 
 <!--DIET-->
 <div class='diet'>
@@ -130,7 +163,7 @@
     </div>
 
     <div class='footerContent'> 
-    <button class='back'><i class="fas fa-house-user"></i></button>
+    <button class='btn back'><i class="fas fa-house-user"></i></button>
     </div>
 </div>
 
