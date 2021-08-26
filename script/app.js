@@ -105,8 +105,8 @@ function createUser(){
           id: data.user.uid,
           city: newUserCity,
           image: 'vazio',
-          training: ['treinoA', 'treinoB', 'treinoC', 'treinoD'],
-          diet: ['Refeição1', 'Refeição2','Refeição3','Refeição4','Refeição5','Refeição6',],
+          training: ['vazio', 'vazio', 'vazio', 'vazio'],
+          diet: ['vazio', 'vazio','vazio','vazio','vazio','vazio',],
           });    
           alert('Usuário criado com Sucesso! :)');
           setTimeout(() => {

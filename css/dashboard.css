@@ -103,6 +103,7 @@ header{
 
 .content{
     width:80%;
+    height: 600px;
     margin:auto;
 
     box-sizing: border-box;
@@ -118,6 +119,7 @@ header{
     align-content: center;
     justify-content: center;
 }
+
 
 .opt{
   display:inline-block;
