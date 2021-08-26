@@ -74,7 +74,7 @@ header{
 
   cursor:pointer;
 
-  margin-top: 30px;
+  margin-top: 50px;
 
 }
 
@@ -95,7 +95,7 @@ header{
 .titleMenu {
     color: white;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 30px;
     text-align: center;
 
     border-bottom: 4px solid #06d106;
