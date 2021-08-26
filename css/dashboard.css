@@ -74,8 +74,7 @@ header{
 
   cursor:pointer;
 
-  margin-top: 55px;
-  margin-bottom: 30px;
+
 }
 
 .title{
@@ -200,6 +199,7 @@ p{
     justify-content: center;
     align-items: center;
     grid-template: repeat(7,100px) / repeat(1,80%); /* Grid Template*/
+    grid-gap: 0px;
 
 }
 
