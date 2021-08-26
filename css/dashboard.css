@@ -74,6 +74,8 @@ header{
 
   cursor:pointer;
 
+  margin-top: 20px;
+
 }
 
 .title{
@@ -97,6 +99,8 @@ header{
     text-align: center;
 
     border-bottom: 4px solid #06d106;
+
+    padding-top: 20px;
 }
 
 
