@@ -1,7 +1,6 @@
 *{
     margin:0;
     padding:0;
-    box-sizing: border-box;
 }
 
 body{
@@ -145,7 +144,7 @@ p{
     background-color: #363636;
 
     width: 414px;
-    height: 736px;
+    overflow: hidden;
 
 
     position:absolute;
