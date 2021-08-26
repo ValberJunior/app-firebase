@@ -74,12 +74,12 @@ header{
 
   cursor:pointer;
 
-  margin-top: 50px;
+  margin-top: 55px;
   margin-bottom: 30px;
 }
 
 .title{
-    background: #0000005d;
+    background: #00000038;
     color:#e2e2e2;
     font-weight: bolder;
     font-size: 17px;
@@ -99,7 +99,6 @@ header{
 
 .titleMenu {
     
-    background: black;
     color: white;
     font-weight: bolder;
     font-size: 30px;
