@@ -10,17 +10,17 @@ let diet = document.getElementsByClassName('diet')[0];
 
 //option training
 op1.addEventListener('click',()=>{
-    menuTraining.style.display='flex';
+    menuTraining.style.display='grid';
 })
 
 //option profile
 op2.addEventListener('click',()=>{
-    profile.style.display='flex';
+    profile.style.display='grid';
 })
 
 //option training
 op3.addEventListener('click',()=>{
-    diet.style.display='flex';
+    diet.style.display='grid';
 })
 
 //Back to menu dashboard;
