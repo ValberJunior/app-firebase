@@ -11,8 +11,9 @@ const firebaseConfig = {
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 
-  let db = firebase.firestore();
-  let auth = firebase.auth();
+  const db = firebase.firestore();
+  const auth = firebase.auth();
+  const storage =  firebase.storage();
 
   
   //Page index----------------------------------------------------------------------
@@ -154,16 +155,50 @@ let editName = document.getElementById('edit_name_user');
 let editLastName = document.getElementById('edit_last_name');
 let editCity = document.getElementById('edit_city');
 
+
+//upload image
+const fileRef = storage.ref('/Images');
+let path = ' '
+let pictureProfile = '';
+
+
+  fileInput.addEventListener('change', (e)=>{
+    let file = e.target.files[0];
+    fileRef.child(file.name).put(file).then(snapshot=>{
+      console.log(snapshot);      
+      return path = file.name;
+    })
+  });
+
+  let root = '/Images/';
+
+  let fullPath = root+path;
+
+  console.log(fullPath);
+
+  let refPicture = storage.ref(fullPath);
+  refPicture.getDownloadURL().then(url =>{ let x = url; localStorage.setItem('link',x)}).catch(
+    err => console.log(err)
+  )
+
+  let a = localStorage.getItem('link');
+  let picture = document.getElementById('profile_picture');
+  picture.src = a;
+
+
+
 function upgradeprofile (){
 
 
   let id = localStorage.getItem("user_id");
-  let new_file = fileInput.value;
+  let new_file = '../assets/profiledefault.jpg';
   let new_name = editName.value;
   let new_lastName = editLastName.value;
   let new_city = editCity.value;
 
-  let userRef = db.collection('users').doc(id);
+  const userRef = db.collection('users').doc(id);
+
+
 
   if (new_file == '' && new_name == '' &&  new_lastName == ''  && new_city == ''){
     alert('Nenhuma alteração efetuada');
@@ -189,6 +224,15 @@ function upgradeprofile (){
   }
 
 }
+
+
+
+
+
+
+
+
+//update
 
 function update(){
 
