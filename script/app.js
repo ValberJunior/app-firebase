@@ -209,10 +209,9 @@ function upgradeprofile (){
             userRef.update({city: new_city}).then().catch(err=> alert('Erro ao atualizar dados', err));
           }
 
+          update();
+          alert('Usuário Atualizado :)');
   }
-
-  update();
-  alert('Usuário Atualizado :)');
 
 }
 

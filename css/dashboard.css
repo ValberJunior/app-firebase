@@ -250,6 +250,8 @@ p{
     width: 90%;
     height: 50px;
 
+    font-size: 18px;
+
     border-radius: 50px;
     
     padding: 10px;
@@ -260,5 +262,5 @@ p{
 }
 
 ::placeholder{
-    font-size: 18px;;
+    font-size: 18px;
 }
