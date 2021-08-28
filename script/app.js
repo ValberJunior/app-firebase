@@ -35,7 +35,7 @@ const firebaseConfig = {
 
       auth.signInWithEmailAndPassword(userEmail, userPassword).then(
         (userLogon) =>{    
-          // a ideia é a mesma, eu pego do colection um documento específico, e pego os dados dele    
+          //Load user data.   
       db.collection("users").doc(userLogon.user.uid).get().then((doc)=>{        
           let name = doc.data().name;
           let lastName = doc.data().lastName;
@@ -95,12 +95,9 @@ function createUser(){
 
 
     auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword).then((data) => {    
-      // esse tem vem com informações do usuário cadastrado    
-      // eu pegaria o id desse valor para poder criar um documento no storage com esse valor.    
+  
+      //To create the document in firestore
       db.collection("users").doc(data.user.uid).set({        
-          // Perceba que eu crio um documento em um acoleção específica de 
-          // usuários que vai ser setado inicialmente        
-          // apenas com nome, dessa forma você guardará informações no firestore      
           name: newUserName,    
           lastName: newUserLN,
           email: newUserEmail,
@@ -114,8 +111,7 @@ function createUser(){
           setTimeout(() => {
             window.location.replace('../index.html');
         }, 1000);
-      })  .catch((err) => {    
-          //   caso tiver algum erro...    
+      })  .catch((err) => {        
          alert ('Favor, verifique os dados digitados');
       });
 
@@ -156,34 +152,30 @@ let editLastName = document.getElementById('edit_last_name');
 let editCity = document.getElementById('edit_city');
 
 
-//upload image
+//upload image  !IMPORTANT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const fileRef = storage.ref('/Images');
 let path = ' '
-let pictureProfile = '';
 
 
   fileInput.addEventListener('change', (e)=>{
     let file = e.target.files[0];
     fileRef.child(file.name).put(file).then(snapshot=>{
       console.log(snapshot);      
-      return path = file.name;
+      let root = '/Images/';
+
+      let fullPath = root+file.name;
+      
+      console.log(fullPath)
+     
+      let refPicture = storage.ref(fullPath);
+      refPicture.getDownloadURL().then(url =>{ path = url; return path}).catch(
+        err => console.log(err)
+      )
+    
     })
   });
 
-  let root = '/Images/';
-
-  let fullPath = root+path;
-
-  console.log(fullPath);
-
-  let refPicture = storage.ref(fullPath);
-  refPicture.getDownloadURL().then(url =>{ let x = url; localStorage.setItem('link',x)}).catch(
-    err => console.log(err)
-  )
-
-  let a = localStorage.getItem('link');
-  let picture = document.getElementById('profile_picture');
-  picture.src = a;
+console.log(path)
 
 
 
@@ -191,7 +183,7 @@ function upgradeprofile (){
 
 
   let id = localStorage.getItem("user_id");
-  let new_file = '../assets/profiledefault.jpg';
+  let new_file = fileInput.value;
   let new_name = editName.value;
   let new_lastName = editLastName.value;
   let new_city = editCity.value;
@@ -205,7 +197,7 @@ function upgradeprofile (){
     window.location.replace('../dashboard.html');
   }   else{
           if (new_file != ''){
-            userRef.update({image: new_file}).then().catch(err=> alert('Erro ao carregar a Foto', err));
+            userRef.update({image: path}).then().catch(err=> alert('Erro ao carregar a Foto', err));
           }
           if (new_name != ''){
             userRef.update({name: new_name}).then().catch(err=> alert('Erro ao atualizar dados', err));
@@ -217,11 +209,10 @@ function upgradeprofile (){
             userRef.update({city: new_city}).then().catch(err=> alert('Erro ao atualizar dados', err));
           }
 
-          alert('Usuário Atualizado :)')
-          
-          update();
-
   }
+
+  update();
+  alert('Usuário Atualizado :)');
 
 }
 
@@ -269,5 +260,6 @@ function update(){
     
 
     window.location.replace('../dashboard.html');
+
     })
 }

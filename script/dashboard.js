@@ -78,13 +78,14 @@ treinoD.innerText = trnD;
 // menu profile
 let menu2 = document.getElementById('menu2');
 
-
+let profile_picture = document.getElementById('profile_picture')
 let name_user = document.getElementById('name_user')
 let Last_name = document.getElementById('last_name')
 let id_user = document.getElementById('id_user')
 let city = document.getElementById('city')
 let email_user = document.getElementById('email_user')
 
+let pict = localStorage.getItem('picture');
 let nm = localStorage.getItem("user");
 let ln = localStorage.getItem("user_ln");
 let id = localStorage.getItem("user_id");
@@ -92,7 +93,7 @@ let ct = localStorage.getItem("user_city");
 let em = localStorage.getItem("user_email");
 
 
-
+profile_picture.src = pict;
 name_user.innerText = nm;
 Last_name.innerText = ln;
 id_user.innerText = id;
