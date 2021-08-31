@@ -157,6 +157,7 @@ const fileRef = storage.ref('/Images');
 let path = ' '
 
 
+if(fileInput){
   fileInput.addEventListener('change', (e)=>{
     let file = e.target.files[0];
     fileRef.child(file.name).put(file).then(snapshot=>{
@@ -174,6 +175,7 @@ let path = ' '
     
     })
   });
+}
 
 console.log(path)
 
@@ -190,6 +192,8 @@ function upgradeprofile (){
 
   const userRef = db.collection('users').doc(id);
 
+  localStorage.setItem('link',path)
+
 
 
   if (new_file == '' && new_name == '' &&  new_lastName == ''  && new_city == ''){
@@ -197,19 +201,23 @@ function upgradeprofile (){
     window.location.replace('../dashboard.html');
   }   else{
           if (new_file != ''){
-            userRef.update({image: path}).then().catch(err=> alert('Erro ao carregar a Foto', err));
+            userRef.update({image: localStorage.getItem('link')}).then().catch(err=> alert('Erro ao carregar a Foto', err));
           }
+
           if (new_name != ''){
             userRef.update({name: new_name}).then().catch(err=> alert('Erro ao atualizar dados', err));
           }
+          
           if (new_lastName != ''){
             userRef.update({lastName: new_lastName}).then().catch(err=> alert('Erro ao atualizar dados', err));
           }
+
           if (new_city != ''){
             userRef.update({city: new_city}).then().catch(err=> alert('Erro ao atualizar dados', err));
           }
-
+          
           update();
+          
           alert('Usuário Atualizado :)');
   }
 
@@ -237,7 +245,7 @@ function update(){
     let email = doc.data().email;
     let trainingMenu = doc.data().training;
     let image = doc.data().image;
-   
+  
   
 
     localStorage.setItem("user", name);
@@ -256,6 +264,7 @@ function update(){
     localStorage.setItem("user_trainingC", trainingMenu[2]);
     localStorage.setItem("user_trainingD", trainingMenu[3]);
     localStorage.setItem("user_image", image);
+ 
     
 
     window.location.replace('../dashboard.html');
