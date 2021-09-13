@@ -85,7 +85,7 @@ let id_user = document.getElementById('id_user')
 let city = document.getElementById('city')
 let email_user = document.getElementById('email_user')
 
-let pict = localStorage.getItem('link');
+let pict = localStorage.getItem('user_image');
 let nm = localStorage.getItem("user");
 let ln = localStorage.getItem("user_ln");
 let id = localStorage.getItem("user_id");
