@@ -34,39 +34,10 @@ const firebaseConfig = {
     auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(()=>{
 
       auth.signInWithEmailAndPassword(userEmail, userPassword).then(
-        (userLogon) =>{    
-          //Load user data.   
-      db.collection("users").doc(userLogon.user.uid).get().then((doc)=>{        
-          let name = doc.data().name;
-          let lastName = doc.data().lastName;
-          let id = doc.data().id;
-          let city = doc.data().city;
-          let dietMenu = doc.data().diet;
-          let email = doc.data().email;
-          let trainingMenu = doc.data().training;
-          let image = doc.data().image;
-         
-        
-
-          localStorage.setItem("user", name);
-          localStorage.setItem("user_ln", lastName);
-          localStorage.setItem("user_id", id);
-          localStorage.setItem("user_city", city);
-          localStorage.setItem("user_diet1", dietMenu[0]);
-          localStorage.setItem("user_diet2", dietMenu[1]);
-          localStorage.setItem("user_diet3", dietMenu[2]);
-          localStorage.setItem("user_diet4", dietMenu[3]);
-          localStorage.setItem("user_diet5", dietMenu[4]);
-          localStorage.setItem("user_diet6", dietMenu[5]);
-          localStorage.setItem("user_email", email);
-          localStorage.setItem("user_trainingA", trainingMenu[0]);
-          localStorage.setItem("user_trainingB", trainingMenu[1]);
-          localStorage.setItem("user_trainingC", trainingMenu[2]);
-          localStorage.setItem("user_trainingD", trainingMenu[3]);
-          localStorage.setItem("user_image", image);
-          
-
-          window.location.replace('../dashboard.html');
+        (userLogon) =>{      
+      db.collection("users").doc(userLogon.user.uid).get().then((doc)=>{   
+        alert('Bem-Vindo(a) '+ doc.data().name + ' :)')    
+        window.location.replace('../dashboard.html');
           })  
       }).catch(error=>{
           alert('Usuário não encontrado!\n Verifique seus dados ou crie um novo usuário :)');
@@ -177,97 +148,65 @@ if(fileInput){
   });
 }
 
-console.log(path)
-
 
 
 function upgradeprofile (){
 
-
-  let id = localStorage.getItem("user_id");
-  let new_file = fileInput.value;
-  let new_name = editName.value;
-  let new_lastName = editLastName.value;
-  let new_city = editCity.value;
-
-  const userRef = db.collection('users').doc(id);
-
-  localStorage.setItem('link',path)
+firebase.auth().onAuthStateChanged(function (user) {  
+  if (user) {    
+    db.collection("users").doc(user.uid).get().then((snapshot) => {   
+      let id = snapshot.data().id;
 
 
+      let new_file = fileInput.value;
+      let new_name = editName.value;
+      let new_lastName = editLastName.value;
+      let new_city = editCity.value;
 
-  if (new_file == '' && new_name == '' &&  new_lastName == ''  && new_city == ''){
-    alert('Nenhuma alteração efetuada');
-    window.location.replace('../dashboard.html');
-  }   else{
-          if (new_file != ''){
-            userRef.update({image: localStorage.getItem('link')}).then().catch(err=> alert('Erro ao carregar a Foto', err));
-          }
-
-          if (new_name != ''){
-            userRef.update({name: new_name}).then().catch(err=> alert('Erro ao atualizar dados', err));
-          }
-          
-          if (new_lastName != ''){
-            userRef.update({lastName: new_lastName}).then().catch(err=> alert('Erro ao atualizar dados', err));
-          }
-
-          if (new_city != ''){
-            userRef.update({city: new_city}).then().catch(err=> alert('Erro ao atualizar dados', err));
-          }
-          
-          update();
-          
-          alert('Usuário Atualizado :)');
-  }
-
-}
+     const userRef = db.collection('users').doc(id);
 
 
+      if (new_file == '' && new_name == '' &&  new_lastName == ''  && new_city == ''){
+        alert('Nenhuma alteração efetuada');
+        window.location.replace('../dashboard.html');
+      }   else{
+              if (new_file != ''){ 
+              userRef.update({ image: path }).then(() => {                   
+                console.log("imagem atualizada com sucesso");           
+              }).catch(err=> alert('Erro ao carregar a Foto', err));
+              }
 
+              if (new_name != ''){
+                userRef.update({name: new_name}).then(()=>{
+                  console.log("Nome atualizado com sucesso")
+                }).catch(err=> alert('Erro ao atualizar dados', err));
+                
+              }
+              
+              if (new_lastName != ''){
+                userRef.update({lastName: new_lastName}).then(
+                  ()=>{
+                    console.log("Sobrenome atualizado com sucesso")
+                  }
+                ).catch(err=> alert('Erro ao atualizar dados', err));
+              }
 
+              if (new_city != ''){
+                userRef.update({city: new_city}).then(()=>{
+                  console.log("Cidade atualizada com sucesso")
+                }).catch(err=> alert('Erro ao atualizar dados', err));
+              }
 
-
-
-
-//update
-
-function update(){
-
-  let id = localStorage.getItem("user_id");
-  
-  db.collection("users").doc(id).get().then((doc)=>{        
-    let name = doc.data().name;
-    let lastName = doc.data().lastName;
-    let id = doc.data().id;
-    let city = doc.data().city;
-    let dietMenu = doc.data().diet;
-    let email = doc.data().email;
-    let trainingMenu = doc.data().training;
-    let image = doc.data().image;
-  
-  
-
-    localStorage.setItem("user", name);
-    localStorage.setItem("user_ln", lastName);
-    localStorage.setItem("user_id", id);
-    localStorage.setItem("user_city", city);
-    localStorage.setItem("user_diet1", dietMenu[0]);
-    localStorage.setItem("user_diet2", dietMenu[1]);
-    localStorage.setItem("user_diet3", dietMenu[2]);
-    localStorage.setItem("user_diet4", dietMenu[3]);
-    localStorage.setItem("user_diet5", dietMenu[4]);
-    localStorage.setItem("user_diet6", dietMenu[5]);
-    localStorage.setItem("user_email", email);
-    localStorage.setItem("user_trainingA", trainingMenu[0]);
-    localStorage.setItem("user_trainingB", trainingMenu[1]);
-    localStorage.setItem("user_trainingC", trainingMenu[2]);
-    localStorage.setItem("user_trainingD", trainingMenu[3]);
-    localStorage.setItem("user_image", image);
- 
-    
-
-    window.location.replace('../dashboard.html');
+                  alert("Perfil atualizado");
+     
+      }    
 
     })
+  }
+})
+
+
 }
+
+
+
