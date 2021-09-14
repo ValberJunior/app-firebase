@@ -1,5 +1,8 @@
  document.onload = load();
 
+ //AOS init
+ AOS.init();
+
 
 
 
