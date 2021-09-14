@@ -1,6 +1,10 @@
 # PROJETO DE UM APP UTILIZANDO FIREBASE.
 
-https://user-images.githubusercontent.com/84424883/128252907-340a1977-8958-425e-8eaa-81d986ae618a.mp4
+
+
+https://user-images.githubusercontent.com/84424883/133318751-3dd6fd59-2e79-4225-af41-35bb9c09323c.mp4
+
+
 
 ## NETLIFY 👉👉 https://appmeutreino.netlify.app/index.html
 
@@ -18,7 +22,7 @@ Um aplicativo para auxiliar e organizar o aluno de uma academia, com orientaçã
 
 ### Como funcionaria?
 
-O usuário criaria a sua conta e os dados seriam alimentados pelo admin, que definirá uma dieta para o mesmo e uma rotina de treino que seriam atualizados conforme necessidade,
+O usuário cria a sua conta com seus dados e uma foto de sua preferência, o admin definirá uma dieta para o mesmo e uma rotina de treino que são atualizados conforme necessidade,
 pelo personal trainer.
 
 ### Funcionalidades da interface:
@@ -28,13 +32,9 @@ pelo personal trainer.
 - Página de login;
 - Menu de opções (depois que a autenticação é efetuada);
 - Opções do menu (Treino , Dados do Aluno, Dieta e botão LogOff);
+- Pagina de edição de perfil com input para carregar foto.
 
-### Prints de Tela
+### Foram utilizados: Firebase Auth (Para gerenciar a criação e autenticação de usuários no sistema); Firebase Firestore (Para armazenar dados e ler os dados); e o Firebase Stoage(Para armazenar as imagens de perfil).
 
-![image1](https://user-images.githubusercontent.com/84424883/128255162-9997371e-89b1-41fc-a0b9-c8b953fc29b2.png)<br><br>
-![image2](https://user-images.githubusercontent.com/84424883/128255193-76f3a3bb-f06f-4df6-8bad-55e2f297b089.png)<br><br>
-![image3](https://user-images.githubusercontent.com/84424883/128255202-75a6b88f-0d5f-4ead-8d6f-18792bfd2e94.png)<br><br>
 
-🚧🚧🚧 Em Upgrade
 
-- implementação do firebase firestore.
