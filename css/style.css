@@ -65,6 +65,9 @@ input {
     color:white;
 
     border-bottom: 2px solid #06d106;
+    margin-bottom: 10px;
+
+    font-size: 18px;
 }
 
 ::placeholder{
@@ -100,16 +103,16 @@ input {
     font-size: 15px;
 }
 
-#send:hover{ opacity: 0.5;}
+#send:hover{ opacity: 0.8;}
 
 .opts{
     width: 100%;
-    font-size:12px;
+    font-size:15px;
     margin-top:5%;
     display: flex;
     align-items: flex-start;
 
-    margin-left:20%;
+    margin-left:10%;
 
 
     cursor:pointer;

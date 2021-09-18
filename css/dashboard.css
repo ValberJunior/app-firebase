@@ -154,7 +154,7 @@ p{
 /*Menus*/
 
 .training, .profile, .diet, .editProfile{
-    background-color: #363636;
+    background-color: black;
 
     width: 414px;
     height: 700px;
@@ -248,19 +248,24 @@ p{
 
 .editProfile  input {
     width: 90%;
-    height: 50px;
+    height: 30px;
 
     font-size: 18px;
-
-    border-radius: 50px;
     
     padding: 10px;
 
     margin-top:20px;
 
     outline: none;
+    border: none;
+
+    background-color: black;
+    color: white;
+
+    border-bottom: 2px solid rgba(128, 128, 128, 0.322);
 }
 
 ::placeholder{
     font-size: 18px;
+    color: #cdcdcd;
 }

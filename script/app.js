@@ -34,12 +34,10 @@ const firebaseConfig = {
     auth.setPersistence(firebase.auth.Auth.Persistence.SESSION).then(()=>{
 
       auth.signInWithEmailAndPassword(userEmail, userPassword).then(
-        (userLogon) =>{      
-      db.collection("users").doc(userLogon.user.uid).get().then((doc)=>{   
-        alert('Bem-Vindo(a) '+ doc.data().name + ' :)')   
+        () =>{       
+       console.log('Usuário logado')   
         load(); 
         window.location.replace('../dashboard.html');
-          })  
       }).catch(error=>{
           alert('Usuário não encontrado!\n Verifique seus dados ou crie um novo usuário :)');
         })
@@ -124,7 +122,7 @@ let editLastName = document.getElementById('edit_last_name');
 let editCity = document.getElementById('edit_city');
 
 
-//upload image  !IMPORTANT <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+//upload image  
 const fileRef = storage.ref('/Images');
 let path = ' '
 
@@ -224,7 +222,7 @@ firebase.auth().onAuthStateChanged(function (user) {
       //Session login
       
       let userSession = document.getElementById('userSession');
-      let user = `Olá ${snapshot.data().name} <i class="fas fa-smile"></i>`;
+      let user = `Olá ${snapshot.data().name} <i class="far fa-smile-beam"></i>`;
       
       userSession.innerHTML = user;
       
